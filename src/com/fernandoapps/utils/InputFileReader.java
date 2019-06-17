@@ -52,12 +52,12 @@ public class InputFileReader {
     public ArrayList<String> readLines() {
         ArrayList<String> lines= new ArrayList<String>();
         FileReader fr = null;
-        BufferedReader br = null;
+        BufferedReader br;
         try {
             fr = new FileReader (file);
 
             br = new BufferedReader(fr);
-            String line="";
+            String line;
             while ((line = br.readLine()) != null){
                 if(!line.isEmpty()){
                     lines.add(line);

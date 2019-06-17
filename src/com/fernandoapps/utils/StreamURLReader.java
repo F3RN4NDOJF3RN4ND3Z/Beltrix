@@ -22,12 +22,12 @@ public class StreamURLReader {
                     new InputStreamReader(pageURL.openStream()));
 
             String inputLine;
-            StringBuilder strBuilder= new StringBuilder();
+            String strConcat= "";
             while ((inputLine = in.readLine()) != null) {
-                strBuilder.append(inputLine);
+                strConcat+=inputLine;
 
             }
-            this.pageContent=strBuilder.toString();
+            this.pageContent=strConcat;
             in.close();
         }catch (IOException ex){
             LOGGER.log(Level.SEVERE,"Error retriving URL content:" + pageURL.toURI().getHost(),ex);

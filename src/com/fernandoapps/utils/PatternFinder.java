@@ -25,13 +25,13 @@ public class PatternFinder extends Thread{
 
     public String getParagraphInnerHTML(String text){
         String innerText="";
-        int startParagraph=text.indexOf("<p>");
+        int startParagraph=text.indexOf("<p");
         int endParagraph=text.indexOf("</p>");
         System.out.println(startParagraph);
         System.out.println(endParagraph);
         if(startParagraph > 0 && endParagraph > 0){
             return innerText + text.substring(startParagraph ,endParagraph) +
-                    getParagraphInnerHTML(text.substring(endParagraph,text.length()-1));
+                    getParagraphInnerHTML(text.substring(endParagraph + 3,text.length()-1));
         }
         return innerText;
     }

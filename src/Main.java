@@ -82,16 +82,4 @@ public class Main {
 
     }
 
-
-
-    public void WebPatterSearcher(){
-        try {
-            StreamURLReader urlReader= new StreamURLReader("https://www.boston.com");
-            urlReader.getURLCotent();
-        } catch (MalformedURLException e) {
-            LOGGER.log(Level.SEVERE,"Error in the excution of WebPatterSearch",e);
-        } catch (URISyntaxException e) {
-            LOGGER.log(Level.SEVERE,"Error in the excution of WebPatterSearch",e);
-        }
-    }
 }
